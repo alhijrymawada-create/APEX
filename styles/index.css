@@ -8,7 +8,7 @@
 body {
     background: radial-gradient(circle at bottom left, #4b0b7a, #000 60%);
     color: #fff;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 main {
@@ -155,15 +155,16 @@ nav ul li.active::after {
 }
 
 .logo {
-    position: fixed;
-    top: -350px;
+    position: absolute;
+    bottom: 50px;
+    top: 10px;
     left: 25%;
     transform: translateX(-50%);
     width: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 50;
 }
 
 .logo img {
@@ -174,13 +175,17 @@ nav ul li.active::after {
 
 .orbit {
     position: absolute;
+    inset: 0;
+    margin: auto;
     width: 500px;
     height: 260px;
     border: 2px solid rgba(217, 70, 239, 0.5);
     border-radius: 50%;
     transform: rotate(20deg);
-    top: -30px;
+    transform-origin: center;
     z-index: 10;
+    bottom: 280px;
+    pointer-events: none;
 }
 
 .brand {
@@ -206,13 +211,16 @@ nav ul li.active::after {
 .footer {
     background: #11162a;
     color: white;
-    padding: 30px 8%;
-    text-align: center;
+    padding: 50px 8%;
     display: flex;
     flex-direction: column;
     gap: 20px;
     flex-shrink: 0;
-    margin: 0;
+    margin-top: 150px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-bottom {
@@ -221,4 +229,39 @@ nav ul li.active::after {
     justify-content: center;
     align-items: center;
     gap: 15px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-icons a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.footer-icons img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.footer-icons a:hover {
+    background: #d946ef;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(217, 70, 239, 0.45);
+}
+
+.footer-icons a:hover img {
+    transform: scale(1.1);
 }

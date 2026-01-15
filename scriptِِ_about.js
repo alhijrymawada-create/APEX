@@ -1,4 +1,4 @@
-// تأثير ظهور النص تدريجياً
+
 const desc = document.querySelector(".description");
 
 window.addEventListener("load", () => {

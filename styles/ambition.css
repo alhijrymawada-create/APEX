@@ -15,7 +15,7 @@ main {
     flex: 1;
 }
 
-/* ===== NAVBAR ===== */
+
 
 nav {
     display: flex;
@@ -34,7 +34,7 @@ nav ul li {
     position: relative;
 }
 
-/* تنسيق الرابط */
+
 nav ul li a {
     color: #aaa;
     text-decoration: none;
@@ -42,7 +42,7 @@ nav ul li a {
     font-size: 16px;
 }
 
-/* العنصر النشط */
+
 nav ul li.active a {
     color: #d946ef;
 }
@@ -126,7 +126,7 @@ nav ul li.active::after {
 
 .card h3 {
     margin-bottom: 10px;
-    color: #83367c;
+    color: #b622a9;
 }
 
 .card p {
